@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Xixo Random Picker</string>
+    <string name="title_activity_main">Xixo Random Picker</string>
+    <string name="package_name">app.xixo.random</string>
+    <string name="custom_url_scheme">app.xixo.random</string>
+</resources>

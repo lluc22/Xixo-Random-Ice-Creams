@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">list</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button (click)="enableAll()">Enable all</ion-button>
+  <ion-button (click)="disableAll()">Disable all</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let ic of iceCreamPrefs">
+      <ion-toggle [checked]="!ic.excluded" (ionChange)="changeToggle($event, ic)">{{ic.ice_cream.label}}</ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
