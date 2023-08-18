@@ -1,0 +1,7 @@
+{
+  "name": "Xixo Random Picker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
