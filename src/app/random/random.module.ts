@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RandomPageRoutingModule } from './random-routing.module';
 
 import { RandomPage } from './random.page';
+import { ThreePageModule } from '../three/three.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { RandomPage } from './random.page';
     RandomPageRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    ThreePageModule
   ],
   declarations: [RandomPage]
 })

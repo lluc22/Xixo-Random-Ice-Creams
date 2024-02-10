@@ -18,7 +18,9 @@
   <ion-button (click)="disableAll()">Disable all</ion-button>
   <ion-list>
     <ion-item *ngFor="let ic of iceCreamPrefs">
-      <ion-toggle [checked]="!ic.excluded" (ionChange)="changeToggle($event, ic)">{{ic.ice_cream.label}}</ion-toggle>
+      <ion-label>{{ic.ice_cream.label}}</ion-label>
+      <ion-icon [color]="ic.ice_cream.baseColor ?? 'primary'" name="ice-cream-basic" slot="start"></ion-icon>
+      <ion-checkbox [class.excluded]="ic.excluded" [checked]="!ic.excluded" (ionChange)="changeToggle($event, ic)"></ion-checkbox>
     </ion-item>
   </ion-list>
 </ion-content>

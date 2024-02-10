@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'three',
+    loadChildren: () => import('./three/three.module').then( m => m.ThreePageModule)
   }
 ];
 

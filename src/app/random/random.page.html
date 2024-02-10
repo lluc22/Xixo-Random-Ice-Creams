@@ -24,9 +24,11 @@
   <ng-container *ngIf="choice">
     <ion-list>
       <ion-item *ngFor="let iceCream of choice">
-        {{iceCream.label}}
+        <ion-icon [color]="iceCream.baseColor ?? 'primary'" name="ice-cream-basic" slot="start"></ion-icon>
+        <ion-label>{{iceCream.label}}</ion-label>
       </ion-item>
     </ion-list>
+    <ice-cream-model [choice]="choice"></ice-cream-model>
   </ng-container>
 
 </ion-content>
