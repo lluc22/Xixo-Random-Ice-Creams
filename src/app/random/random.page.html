@@ -7,28 +7,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Random ice cream</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ng-container>
+<ion-content scroll="false">
+  <div class="container">
     <form [formGroup]="randomGroup" (ngSubmit)="randomize()">
       <ion-item>
         <ion-input label="Boles de gelat" type="number" min="1" max="6" formControlName="bolesControl"></ion-input>
       </ion-item>
       <ion-button type="submit" [disabled]="!randomGroup.valid"> Randomize </ion-button>
     </form>
-  </ng-container>
-  <ng-container *ngIf="choice">
-    <ion-list>
-      <ion-item *ngFor="let iceCream of choice">
-        <ion-icon [color]="iceCream.baseColor ?? 'primary'" name="ice-cream-basic" slot="start"></ion-icon>
-        <ion-label>{{iceCream.label}}</ion-label>
-      </ion-item>
-    </ion-list>
-    <ice-cream-model [choice]="choice"></ice-cream-model>
-  </ng-container>
 
+    <ice-cream-model *ngIf="choice" [choice]="choice"></ice-cream-model>
+   
+  </div>
+  
 </ion-content>
